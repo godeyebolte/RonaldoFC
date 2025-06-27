@@ -131,17 +131,17 @@ def main():
     Main function jo Cloudinary se video fetch karke YouTube par upload karti hai.
     """
     try:
-        print("Fetching videos from Cloudinary 'For_Youtube_Videos/' folder...")
+        print("Fetching videos from Cloudinary 'RonaldoFC/' folder...")
         result = cloudinary.api.resources(
             type='upload',
             resource_type='video',
-            prefix='For_Youtube_Videos/',
+            prefix='RonaldoFC/',
             max_results=500
         )
         videos = result.get('resources', [])
 
         if not videos:
-            print("Cloudinary 'For_Youtube_Videos/' folder mein koi video nahi mili.")
+            print("Cloudinary 'RonaldoFC/' folder mein koi video nahi mili.")
             return
 
         random_video = random.choice(videos)
@@ -164,7 +164,7 @@ def main():
 
         # --- YouTube metadata (China Tech, Facts, Knowledge) ---
         # Video public_id se title generate karein
-        # 'For_Youtube_Videos/my_awesome_video' -> 'My Awesome Video'
+        # 'RonaldoFC/my_awesome_video' -> 'My Awesome Video'
         base_name = video_public_id.split('/')[-1]
         youtube_title = base_name.replace('_', ' ').replace('-', ' ').title() + " | China Tech & Knowledge" # Title ko video ID se banao
 
@@ -205,3 +205,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
