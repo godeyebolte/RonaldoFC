@@ -4,7 +4,7 @@ on:
   schedule:
     # Schedule: Har din 5:00 PM IST par (jo ki 11:30 AM UTC hota hai)
     # Cron format: minute hour day_of_month month day_of_week
-    # 30 11 * * * means 11:30 UTC.
+    - cron: '30 4 * * *' # Har din subah 10:00 AM IST par chalega
     # Note: IST is UTC+5:30. So 11:30 UTC is 5:00 PM IST.
    
   
